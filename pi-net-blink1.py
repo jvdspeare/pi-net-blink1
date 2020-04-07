@@ -20,7 +20,7 @@ def ping(host):
     return response
 
 
-for x, y in hosts:
+for x, y in hosts.items():
     print(x, y)
     if ping('192.168.20.1') == 0:
         print('up')
