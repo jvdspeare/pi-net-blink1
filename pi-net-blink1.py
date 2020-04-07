@@ -22,9 +22,10 @@ def ping(host):
 
 for x, y in hosts.items():
     print(x, y)
-    if ping('192.168.20.1') == 0:
+    if ping(y[0]) == 0:
         print('up')
-        blink('blue')
+        Blink1().off()
     else:
         print('down')
-        blink('yellow')
+        blink(y[1])
+    time.sleep(5)
