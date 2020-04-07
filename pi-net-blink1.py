@@ -18,6 +18,7 @@ def blink(colour):
 
 def ping(host):
     response = os.system('ping -c 1 ' + host)
+    time.sleep(0.3)
     return response
 
 
@@ -25,10 +26,9 @@ for x, y in hosts.items():
     print(x, y)
     if ping(y[0]) == 0:
         print('up')
-        b1 = Blink1()
-        b1.off()
-        b1.close()
+        b2 = Blink1()
+        b2.off()
+        b2.close()
     else:
         print('down')
         blink(y[1])
-    time.sleep(5)
