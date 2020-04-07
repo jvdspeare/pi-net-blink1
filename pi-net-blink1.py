@@ -27,14 +27,15 @@ while True:
     for x, y in hosts.items():
         print(x, y)
         if ping(y[0]) == 0:
-            status.append(1)
+            status.append(True)
             print(x + 'up')
         else:
-            status.append(0)
+            status.append(False)
             print(x + 'down')
             blink(y[1])
 
-    if any(status) == 0:
+    if any(status) is False:
+        print('#########!!!!!!!!')
         time.sleep(5)
     else:
         b2 = Blink1()
