@@ -38,12 +38,11 @@ while True:
             blink(y[1])
 
     if 0 in status:
-        print('#########!!!!!!!!')
+        time.sleep(0.3)
     else:
         b2 = Blink1()
         b2.off()
         b2.close()
-
-    time.sleep(10)
+        time.sleep(30)
 
     status.clear()
