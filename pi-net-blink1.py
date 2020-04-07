@@ -36,7 +36,8 @@ while True:
 
     print(status)
 
-    if any(status) is False:
+    x = any(status) == 1
+    if x is True:
         print('#########!!!!!!!!')
         time.sleep(5)
     else:
@@ -44,3 +45,4 @@ while True:
         b2.off()
         b2.close()
 
+    status.clear()
