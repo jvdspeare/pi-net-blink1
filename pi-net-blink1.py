@@ -47,4 +47,3 @@ while True:
         b2.close()
 
     status.clear()
-
