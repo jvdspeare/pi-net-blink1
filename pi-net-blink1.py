@@ -34,6 +34,8 @@ while True:
             print(x + 'down')
             blink(y[1])
 
+    print(status)
+
     if any(status) is False:
         print('#########!!!!!!!!')
         time.sleep(5)
