@@ -13,6 +13,7 @@ hosts = {
 def blink(colour):
     b1 = Blink1()
     b1.fade_to_color(100, colour)
+    b1.close()
 
 
 def ping(host):
@@ -25,6 +26,7 @@ for x, y in hosts.items():
     if ping(y[0]) == 0:
         print('up')
         Blink1().off()
+        Blink1().close()
     else:
         print('down')
         blink(y[1])
