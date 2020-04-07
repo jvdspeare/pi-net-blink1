@@ -36,7 +36,7 @@ while True:
 
     print(status)
 
-    if any(status) is False:
+    if 0 in status:
         print('#########!!!!!!!!')
         time.sleep(5)
     else:
