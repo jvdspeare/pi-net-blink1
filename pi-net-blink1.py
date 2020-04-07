@@ -25,7 +25,9 @@ for x, y in hosts.items():
     print(x, y)
     if ping(y[0]) == 0:
         print('up')
-        blink('black')
+        b1 = Blink1()
+        b1.off()
+        b1.close()
     else:
         print('down')
         blink(y[1])
