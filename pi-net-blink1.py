@@ -4,8 +4,11 @@ import os
 from blink1.blink1 import Blink1
 
 hosts = {
-    'edge router': ['192.168.20.1', 'red'],
-    'secondary DNS': ['192.168.20.5', 'blue']
+    'google DNS': ['8.8.8.8', 'Red'],
+    'telstra gateway max': ['192.168.20.1', 'Orange'],
+    'ubiquiti edgerouter poe 5': ['192.168.20.1', 'Yellow'],
+    'apple airport extreme': ['192.168.20.2', 'Blue'],
+    'secondary DNS': ['192.168.20.5', 'Green']
 }
 
 status = list()
@@ -34,14 +37,13 @@ while True:
             print(x + 'down')
             blink(y[1])
 
-    print(status)
-
     if 0 in status:
         print('#########!!!!!!!!')
-        time.sleep(5)
     else:
         b2 = Blink1()
         b2.off()
         b2.close()
+
+    time.sleep(10)
 
     status.clear()
