@@ -6,7 +6,7 @@ from blink1.blink1 import Blink1
 
 hosts = {
     'edge router': ['192.168.20.1', 'red'],
-    'secondary DNS': ['192.168.20.5', 'blue']
+    'secondary DNS': ['192.168.20.244', 'blue']
 }
 
 
@@ -25,7 +25,7 @@ for x, y in hosts.items():
     print(x, y)
     if ping(y[0]) == 0:
         print('up')
-        blink('blue')
+        blink('black')
     else:
         print('down')
         blink(y[1])
