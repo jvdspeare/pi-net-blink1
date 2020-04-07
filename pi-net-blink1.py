@@ -6,7 +6,7 @@ from blink1.blink1 import Blink1
 
 hosts = {
     'edge router': ['192.168.20.1', 'red'],
-    'secondary DNS': ['192.168.20.5', 'yellow'],
+    'secondary DNS': ['192.168.20.5', 'blue']
 }
 
 
