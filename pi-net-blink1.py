@@ -40,9 +40,8 @@ while True:
             print(item[1][1])
             blink_colours.append(item[1][1] + ',3,0')
 
-    blink(blink_colours)
-
     if 0 in status:
+        blink(blink_colours)
         time.sleep(30)
     else:
         b2 = Blink1()
