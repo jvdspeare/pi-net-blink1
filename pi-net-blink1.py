@@ -40,7 +40,6 @@ while True:
             blink_colours = blink_colours + ', ' + item[1][1] + ',0.5,0, Black,0.5,0'
 
     if 0 in status:
-        print(blink_colours)
         blink(blink_colours)
         time.sleep(30)
     else:
