@@ -19,7 +19,6 @@ status = list()
 def blink(colour):
     b1 = Blink1()
     b1.play_pattern(colour)
-    b1.off()
     b1.close()
 
 
