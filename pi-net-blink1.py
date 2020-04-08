@@ -37,7 +37,7 @@ while True:
 
     for idx, item in enumerate(hosts.items()):
         if status[idx] == 0:
-            print(item)
+            print(item[1][1])
 
     if 0 in status:
         time.sleep(30)
