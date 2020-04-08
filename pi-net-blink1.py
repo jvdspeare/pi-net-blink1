@@ -21,23 +21,22 @@ def blink(colour):
     b1.close()
 
 
-def ping(host):
-    response = os.system('ping -c 1 ' + host)
-    time.sleep(0.3)
-    return response
-
-
-while True:
-    for x, y in hosts.items():
-        if ping(y[0]) == 0:
+def ping():
+    for x in hosts.values():
+        response = os.system('ping -c 1 ' + x[1])
+        if response == 0:
             status.append(1)
         else:
             status.append(0)
-            blink(y[1])
+
+
+while True:
+    ping()
 
     for idx, item in enumerate(hosts.items()):
         if status[idx] == 0:
             print(item[1][1])
+            blink(item[1][1])
 
     if 0 in status:
         time.sleep(30)
