@@ -37,7 +37,6 @@ while True:
 
     for idx, item in enumerate(hosts.items()):
         if status[idx] == 0:
-            print(item[1][1])
             blink_colours = blink_colours + ', ' + item[1][1] + ',0.5,0, Black,0.5,0'
 
     if 0 in status:
