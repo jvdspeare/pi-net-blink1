@@ -23,7 +23,7 @@ def blink(colour):
 
 def ping():
     for x in hosts.values():
-        response = os.system('ping -c 1 ' + x[1])
+        response = os.system('ping -c 1 ' + x[0])
         if response == 0:
             status.append(1)
         else:
