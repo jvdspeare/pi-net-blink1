@@ -18,7 +18,7 @@ blink_colours = list()
 
 def blink(colour):
     b1 = Blink1()
-    b1.play_pattern(colour)
+    b1.play_pattern('10, #ff00ff,0.3,1, #00ff00,0.1,2,  #ff00ff,0.3,2, #00ff00,0.1,1')
     b1.close()
 
 
