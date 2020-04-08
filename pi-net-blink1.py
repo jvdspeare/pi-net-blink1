@@ -29,17 +29,15 @@ def ping(host):
 
 while True:
     for x, y in hosts.items():
-        print(x, y)
         if ping(y[0]) == 0:
             status.append(1)
         else:
             status.append(0)
             blink(y[1])
 
-    for idx, x, y in enumerate(hosts.items()):
+    for idx, item in enumerate(hosts.items()):
         if status[idx] == 0:
-            print(x)
-            print(y)
+            print(item)
 
     if 0 in status:
         time.sleep(30)
