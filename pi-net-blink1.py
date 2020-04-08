@@ -9,7 +9,8 @@ hosts = {
     'ubiquiti edgerouter poe 5': ['192.168.20.1', 'Yellow'],
     'apple airport extreme': ['192.168.20.2', 'Blue'],
     'secondary DNS': ['192.168.20.5', 'Green'],
-    'test device': ['192.168.22.21', 'Purple']
+    'test device': ['192.168.22.21', 'Purple'],
+    'test device 2': ['192.168.22.22', 'Blue']
 }
 
 status = list()
@@ -41,7 +42,6 @@ while True:
 
     if 0 in status:
         print(blink_colours)
-        time.sleep(10)
         blink(blink_colours)
         time.sleep(30)
     else:
@@ -51,4 +51,3 @@ while True:
         time.sleep(30)
 
     status.clear()
-    blink_colours.clear()
