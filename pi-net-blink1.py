@@ -18,7 +18,7 @@ blink_colours = list()
 
 def blink(colour):
     b1 = Blink1()
-    b1.play_pattern('10, Red,0.3,1, Green,0.1,2,  Red,0.3,2, Green,0.1,1')
+    b1.play_pattern(colour)
     b1.close()
 
 
@@ -33,12 +33,12 @@ def ping():
 
 while True:
     ping()
-    blink_colours.append(10)
+    blink_colours.append('10')
 
     for idx, item in enumerate(hosts.items()):
         if status[idx] == 0:
             print(item[1][1])
-            blink_colours.append(item[1][1] + ',3,0')
+            blink_colours.append(str(item[1][1] + ',0.9,0'))
 
     if 0 in status:
         blink(blink_colours)
