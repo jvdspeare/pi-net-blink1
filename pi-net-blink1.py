@@ -38,7 +38,6 @@ while True:
 
     for idx, x, y in enumerate(hosts.items()):
         if status[idx] == 0:
-            print(idx)
             print(x)
             print(y)
 
