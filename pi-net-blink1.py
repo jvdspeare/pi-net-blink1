@@ -41,6 +41,8 @@ while True:
             blink_colours.append(str(item[1][1] + ',0.9,0'))
 
     if 0 in status:
+        print(blink_colours)
+        time.sleep(10)
         blink(blink_colours)
         time.sleep(30)
     else:
