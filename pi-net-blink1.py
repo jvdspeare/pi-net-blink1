@@ -8,7 +8,8 @@ hosts = {
     'telstra gateway max': ['192.168.20.1', 'Orange'],
     'ubiquiti edgerouter poe 5': ['192.168.20.1', 'Yellow'],
     'apple airport extreme': ['192.168.20.2', 'Blue'],
-    'secondary DNS': ['192.168.20.5', 'Green']
+    'secondary DNS': ['192.168.20.5', 'Green'],
+    'test device': ['192.168.22.21', 'Purple']
 }
 
 status = list()
@@ -31,14 +32,18 @@ while True:
         print(x, y)
         if ping(y[0]) == 0:
             status.append(1)
-            print(x + 'up')
         else:
             status.append(0)
-            print(x + 'down')
             blink(y[1])
 
+    for idx, x, y in enumerate(hosts.items()):
+        if status[idx] == 0:
+            print(idx)
+            print(x)
+            print(y)
+
     if 0 in status:
-        time.sleep(0.3)
+        time.sleep(30)
     else:
         b2 = Blink1()
         b2.off()
