@@ -13,7 +13,6 @@ hosts = {
 }
 
 status = list()
-blink_colours = list()
 
 
 def blink(colour):
@@ -33,12 +32,12 @@ def ping():
 
 while True:
     ping()
-    blink_colours.append('10')
+    blink_colours = '10'
 
     for idx, item in enumerate(hosts.items()):
         if status[idx] == 0:
             print(item[1][1])
-            blink_colours.append(str(item[1][1] + ',0.9,0'))
+            blink_colours + str((item[1][1]) + ',0.9,0')
 
     if 0 in status:
         print(blink_colours)
