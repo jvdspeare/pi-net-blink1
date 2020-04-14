@@ -10,9 +10,7 @@ hosts = {
     'telstra gateway max': ['192.168.20.1', 'Orange'],
     'ubiquiti edgerouter poe 5': ['192.168.20.1', 'Yellow'],
     'apple airport extreme': ['192.168.20.2', 'Blue'],
-    'secondary DNS': ['192.168.20.5', 'Green'],
-    'st1': ['192.168.200.5', 'Green'],
-    'st2': ['192.168.200.65', 'Red']
+    'secondary DNS': ['192.168.20.5', 'Green']
 }
 
 # list to track status
