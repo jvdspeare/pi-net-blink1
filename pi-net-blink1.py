@@ -20,7 +20,6 @@ status = list()
 
 # define sleep time for loop, this affects the frequency at which hosts are monitored (adapted to the number of hosts)
 sleep_time = len(hosts) * 3
-print(sleep_time)
 
 
 # blink the blink
@@ -39,14 +38,14 @@ def ping(down_count=0):
         else:
             status.append(0)
             down_count += 1
-    print(down_count)
+    if down_count == 0:
+        down_count = 1
     return down_count
 
 
 # ping hosts, blink the blink, wait before testing again
 while True:
-    blink_colours = str(math.ceil(sleep_time / ping()))
-    print(blink_colours)
+    blink_colours = str(math.ceil((sleep_time + len(hosts)) / ping()))
 
     for idx, item in enumerate(hosts.items()):
         if status[idx] == 0:
