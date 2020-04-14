@@ -1,6 +1,7 @@
 # import
 import time
 import os
+import math
 from blink1.blink1 import Blink1
 
 # define the hosts to monitor (name, ip/hostname, colour for blink)
@@ -44,12 +45,12 @@ def ping(down_count=0):
 
 # ping hosts, blink the blink, wait before testing again
 while True:
-    blink_time = sleep_time / ping()
-    print(blink_time)
+    blink_colours = str(math.ceil(sleep_time / ping()))
+    print(blink_colours)
 
     for idx, item in enumerate(hosts.items()):
         if status[idx] == 0:
-            blink_colours = str(blink_time) + ', ' + item[1][1] + ',0.5,0, Black,0.5,0'
+            blink_colours = blink_colours + ', ' + item[1][1] + ',0.5,0, Black,0.5,0'
 
     if 0 in status:
         blink(blink_colours)
